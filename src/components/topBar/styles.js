@@ -4,7 +4,9 @@ export const NavBar = styled.nav`
   width: 100%;
   height: 50px;
   background-color: white;
-
+  position: sticky;
+  top: 0;
+  z-index: 999;
 `
 
 export const WraperStyled = styled.div`
@@ -25,13 +27,25 @@ export const Logo = styled.span`
 `
 
 export const ItemRight = styled.div`
-    
+  display: flex;
+  align-items: center;
+  margin-right: 10px; 
+  justify-content: space-around;
+  color: ${({ theme }) => theme.colors.thirdAlphaColor};
+
+  img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 `
 
 export const Icons = styled.div`
 
   position: relative;
-
+  cursor: pointer;
+  margin-right: 12px;
   span{
     color: white;
     width: 15px;
