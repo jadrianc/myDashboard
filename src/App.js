@@ -2,6 +2,7 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyle from './components/styles/Global.styled'
 import TopBar from './components/topBar'
 import SideBar from './components/sideBar'
+import Home from './pages/home'
 const theme = {
   colors: {
     firstColor: '#d90062',
@@ -38,7 +39,9 @@ function App () {
         <TopBar />
         <div className='container'>
           <SideBar />
-          <div className='pages'></div>
+          <div className='pages'>
+            <Home />
+          </div>
         </div>
       </ThemeProvider>
     </>

@@ -6,6 +6,7 @@ export const SideBarStyled = styled.aside`
   height: 100%;
   background-color: ${({ theme }) => theme.colors.thirdColor};
   position: sticky;
+  
   top: 50px;
 `
 
