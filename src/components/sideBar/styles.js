@@ -44,4 +44,9 @@ export const SidebarListItem = styled.li`
     margin-right: 5px;
     font-size: 20px;
   }
+
+  a{
+    color: ${({ theme }) => theme.colors.currentLine};
+    text-decoration: none;
+  }
 `

@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 import { SidebarList, SidebarListItem } from './styles'
 import { linksItems } from '../../data/dummy'
 const LinksItems = () => {
@@ -11,8 +11,7 @@ const LinksItems = () => {
             section.links.map((link) => (
               <SidebarList>
                 <SidebarListItem>
-                  {link.icon}
-                  {link.name}
+                  <Link to={link.route}>{link.icon} {link.name}</Link>
                 </SidebarListItem>
               </SidebarList>
             ))
