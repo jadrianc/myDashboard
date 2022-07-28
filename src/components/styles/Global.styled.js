@@ -30,6 +30,14 @@ const GlobalStyle = createGlobalStyle`
         opacity: 0.75;
     }
 
+    .container{
+        display: flex;
+    }
+
+    .pages{
+        flex: 4;
+    }
+
     h1 {
         margin: 0;
         font-size: 2rem;
