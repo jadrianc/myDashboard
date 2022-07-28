@@ -3,6 +3,7 @@ import GlobalStyle from './components/styles/Global.styled'
 import TopBar from './components/topBar'
 import SideBar from './components/sideBar'
 import Home from './pages/home'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 const theme = {
   colors: {
     firstColor: '#d90062',
@@ -34,16 +35,20 @@ const theme = {
 function App () {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle/>
-        <TopBar />
-        <div className='container'>
-          <SideBar />
-          <div className='pages'>
-            <Home />
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle/>
+          <TopBar />
+          <div className='container'>
+            <SideBar />
+            <div className='pages'>
+              <Routes>
+                <Route path="/home" element={<Home />}/>
+              </Routes>
+            </div>
           </div>
-        </div>
-      </ThemeProvider>
+        </ThemeProvider>
+      </BrowserRouter>
     </>
   )
 }
